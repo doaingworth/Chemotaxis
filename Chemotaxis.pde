@@ -1,6 +1,7 @@
 //declare bacteria variables here   
 int bactNum = 30; 
 Bacteria[] germs = new Bacteria[bactNum];
+int[] colorVals = new int[3];
 
 void setup()   
 {     
@@ -9,7 +10,6 @@ void setup()
   size(900,900);
   for (int x = 0; x < bactNum; x++) 
   {
-    int[] colorVals = new int[3];
     colorVals[0] = (int)(Math.random()*255);
     colorVals[1] = (int)(Math.random()*255);
     colorVals[2] = (int)(Math.random()*255);
