@@ -19,7 +19,7 @@ void setup()
 
 void draw()   
 {    
-  clear();
+  background(0);
   for (int x = 0; x < bactNum; x++) 
   {
     germs[x].move();
