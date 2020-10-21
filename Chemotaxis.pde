@@ -1,7 +1,6 @@
 //declare bacteria variables here   
 int bactNum = 30; 
 Bacteria[] germs = new Bacteria[bactNum];
-int[] colorVals = new int[3];
 
 void setup()   
 {     
@@ -10,10 +9,7 @@ void setup()
   size(900,900);
   for (int x = 0; x < bactNum; x++) 
   {
-    colorVals[0] = (int)(Math.random()*255);
-    colorVals[1] = (int)(Math.random()*255);
-    colorVals[2] = (int)(Math.random()*255);
-    germs[x] = new Bacteria((int)(Math.random()*900), (int)(Math.random()*900), (int)(Math.random()*100)+1, colorVals);
+    germs[x] = new Bacteria((int)(Math.random()*900), (int)(Math.random()*900), (int)(Math.random()*100)+1);
   }
 }   
 
@@ -30,12 +26,14 @@ void draw()
 class Bacteria
 {     
   int locX, locY, bactSize;
-  int[] bactColor;
-  Bacteria(int x, int y, int size, int[] colorr) {
+  int[] bactColor = new int[3];
+  Bacteria(int x, int y, int size) {
     locX = x;
     locY = y;
     bactSize = size;
-    bactColor = colorr;
+    bactColor[0] = (int)(Math.random()*255);
+    bactColor[1] = (int)(Math.random()*255);
+    bactColor[2] = (int)(Math.random()*255);
   }
   
   void move() 
